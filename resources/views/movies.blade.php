@@ -12,7 +12,7 @@
         @include('partials.nav')
     </nav>
     <main class="text-center">
-        <div class="container">
+        <div class="container d-flex">
             @foreach ($movies as $movie)
                 <div class="card" style="width: 18rem;">
                     <div class="card-header">
