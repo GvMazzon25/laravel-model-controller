@@ -13,16 +13,20 @@
     </nav>
     <main class="text-center">
         <div class="container">
-            <div class="card" style="width: 18rem;">
-                <div class="card-header">
-                  Featured
+            @foreach ($movies as $movie)
+                <div class="card" style="width: 18rem;">
+                    <div class="card-header">
+                    {{ $movie['title'] }}
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">{{ $movie['original-title'] }}</li>
+                        <li class="list-group-item">{{ $movie['date'] }}</li>
+                        <li class="list-group-item">{{ $movie['nationality'] }}</li>
+                        <li class="list-group-item">{{ $movie['vote'] }}</li>
+                    </ul>
                 </div>
-                <ul class="list-group list-group-flush">
-                  <li class="list-group-item">An item</li>
-                  <li class="list-group-item">A second item</li>
-                  <li class="list-group-item">A third item</li>
-                </ul>
-              </div>
+            @endforeach
+            
         </div>
     </main>
 </body>
